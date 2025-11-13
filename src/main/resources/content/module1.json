@@ -1,0 +1,71 @@
+{
+  "id": 1,
+  "title": "Module 1: The Absolute Basics (The 'What')",
+  "description": "Understanding what programming is and writing your first lines of code",
+  "goal": "Understand what programming is and write your first line of code",
+  "lessons": [
+    {
+      "id": "1.1",
+      "title": "What Is Programming? (The Recipe Analogy)",
+      "conceptAnalogy": "Imagine you're teaching a very literal robot to make a peanut butter and jelly sandwich. You can't just say 'make a sandwich' - the robot doesn't know what that means!\n\nYou have to break it down into tiny, specific steps: 'Pick up the knife. Dip the knife into the peanut butter jar. Spread the peanut butter on one slice of bread.' That's exactly what programming is.\n\nProgramming is writing a list of very specific instructions that a computer can follow. The computer is like that literal robot - it will do exactly what you tell it to do, but nothing more. It can't guess what you mean, and it can't read your mind. You have to be crystal clear.\n\nThe 'language' we use to give these instructions is called a programming language. Today, we're learning JavaScript, which is like giving instructions to a web browser.",
+      "codeExample": "// This is a comment - the computer ignores this line.\n// Comments are notes we leave for ourselves.\n\n// This is an instruction to the computer:\nconsole.log('Hello, World!');\n\n// The computer will display the text 'Hello, World!' on the screen.",
+      "syntaxBreakdown": "Let's break down that code line by line:\n\n1. Lines starting with // are comments. They're ignored by the computer. Think of them as sticky notes you leave for yourself (or other programmers) to explain what the code does.\n\n2. console.log('Hello, World!'); - This is an instruction (we'll call it a 'statement' later). Let's unpack it:\n   - console is like a special message board built into your web browser\n   - log means 'write a message'\n   - The text inside the parentheses and quotes ('Hello, World!') is the message we want to write\n   - The semicolon ; at the end is like a period at the end of a sentence - it tells the computer 'this instruction is complete'\n\nSo the whole thing means: 'Computer, write the message Hello, World! to the console.'",
+      "challenge": {
+        "instructions": "Now it's your turn! Your challenge: Write code that displays your own name to the console. Replace 'Your Name Here' with your actual name (keep the quotes!).",
+        "starterCode": "// Replace 'Your Name Here' with your name\nconsole.log('Your Name Here');",
+        "testCases": [
+          {
+            "description": "Code runs without errors",
+            "input": "",
+            "expectedOutput": ""
+          }
+        ],
+        "hint": "Make sure to keep the quotes around your name, and don't forget the semicolon at the end!"
+      },
+      "solution": "console.log('Alice');  // Replace Alice with your actual name",
+      "commonStickingPoints": "Common mistakes beginners make:\n\n1. Forgetting the quotes: console.log(Alice); won't work because the computer thinks Alice is a variable (a 'box' we'll learn about soon), not text.\n\n2. Forgetting the semicolon: While JavaScript is forgiving about this, it's good practice to always end statements with ;\n\n3. Misspelling console or log: Programming is case-sensitive! Console.log or console.Log won't work.\n\n4. Missing parentheses: console.log 'Alice'; won't work. The parentheses are how we 'pass' the message to the log function."
+    },
+    {
+      "id": "1.2",
+      "title": "Your First Workspace (The Browser Console)",
+      "conceptAnalogy": "Think of the browser console as your workshop - it's where you'll build and test your code. Just like a carpenter has a workbench where they can quickly test if a joint fits or a piece is the right size, the browser console is where you can quickly try out JavaScript code and see the results immediately.\n\nThe console is a special tool built into every modern web browser. It's hidden by default, but once you open it, you can type JavaScript code directly and the browser will run it instantly. It's like having a conversation with the browser - you give it instructions (in JavaScript), and it responds.",
+      "codeExample": "// You can do math in the console!\nconsole.log(5 + 3);\n\n// You can write multiple messages\nconsole.log('First message');\nconsole.log('Second message');\nconsole.log('Third message');\n\n// You can even do math inside the message\nconsole.log('The answer is: ' + (10 * 2));",
+      "syntaxBreakdown": "Let's look at what's happening:\n\n1. console.log(5 + 3); - The computer will actually do the math (5 + 3 = 8) and then display '8'. The computer evaluates (figures out) what's inside the parentheses first, then displays the result.\n\n2. Multiple console.log statements run in order, from top to bottom. The computer executes them one at a time, like following a recipe step by step.\n\n3. The + symbol does two things in JavaScript:\n   - When used with numbers, it adds them: 5 + 3 = 8\n   - When used with text (in quotes), it joins them together: 'Hello' + ' ' + 'World' becomes 'Hello World'\n\n4. Notice the parentheses around (10 * 2) in the last example? That tells the computer 'do this math first, then join it with the text.'",
+      "challenge": {
+        "instructions": "Create a mini calculator! Write code that:\n1. Displays the result of 15 + 27\n2. Displays the result of 100 - 45\n3. Displays the result of 6 * 7 (the * symbol means multiply)",
+        "starterCode": "// Calculate and display 15 + 27\nconsole.log(15 + 27);\n\n// Calculate and display 100 - 45\n// YOUR CODE HERE\n\n// Calculate and display 6 * 7\n// YOUR CODE HERE",
+        "testCases": [
+          {
+            "description": "Displays 42 (the result of 15 + 27)",
+            "input": "",
+            "expectedOutput": "42"
+          }
+        ],
+        "hint": "Follow the same pattern as the first line: console.log(), put the math inside the parentheses, and end with a semicolon."
+      },
+      "solution": "console.log(15 + 27);\nconsole.log(100 - 45);\nconsole.log(6 * 7);",
+      "commonStickingPoints": "Common mistakes:\n\n1. Putting quotes around the numbers: console.log('100 - 45'); will display the text '100 - 45' instead of doing the math. Remove the quotes to make the computer calculate it.\n\n2. Forgetting the console.log part: Just writing 100 - 45; won't display anything. You need console.log() to actually show the result.\n\n3. Wrong symbols: Make sure you use * for multiplication (not x), and - for subtraction (not a dash that might look similar)."
+    },
+    {
+      "id": "1.3",
+      "title": "Leaving Notes for Yourself (Comments)",
+      "conceptAnalogy": "Imagine you're cooking a complex recipe, and you write little notes in the margins: 'This takes 20 minutes' or 'Make sure the oven is preheated!' Those notes aren't part of the recipe itself - they're reminders to yourself.\n\nComments in code work the same way. They're notes you leave for yourself (or other programmers) that the computer completely ignores. The computer will skip right over them like they don't exist.\n\nWhy are comments important? Because code that makes perfect sense today might be confusing in a month. Comments explain WHY you wrote the code a certain way, not just WHAT the code does.",
+      "codeExample": "// This is a single-line comment\n// The computer ignores everything after the //\n\nconsole.log('This runs!');  // You can also put comments at the end of a line\n\n// console.log('This does NOT run because it is commented out');\n\n/*\n  This is a multi-line comment.\n  Everything between the /* and */ is ignored.\n  This is useful for longer explanations.\n*/\n\nconsole.log('This also runs!');\n\n/* You can also use multi-line comments\n   to temporarily 'turn off' code:\n   console.log('This is turned off');\n   console.log('So is this');\n*/",
+      "syntaxBreakdown": "Two types of comments:\n\n1. Single-line comments: //\n   - Everything after // on that line is ignored\n   - Great for short notes\n   - Example: // This calculates the total price\n\n2. Multi-line comments: /* */\n   - Everything between /* and */ is ignored, even across multiple lines\n   - Great for longer explanations or temporarily disabling multiple lines of code\n   - Example:\n     /*\n       This function is complex, so here's how it works:\n       First, it checks if the user is logged in...\n     */\n\nPro tip: Use comments to explain WHY, not WHAT. The code itself shows WHAT it does. Comments should explain WHY you made that choice.\n\nGood comment: // Using 30-day trial period instead of 7-day based on user feedback\nBad comment: // This sets the trial period to 30",
+      "challenge": {
+        "instructions": "Practice using comments! Add a single-line comment above the console.log explaining what the code does. Then, comment out the second console.log (so it doesn't run) using //.",
+        "starterCode": "console.log('I am learning JavaScript!');\n\nconsole.log('Comment me out!');",
+        "testCases": [
+          {
+            "description": "Only the first message is displayed",
+            "input": "",
+            "expectedOutput": "I am learning JavaScript!"
+          }
+        ],
+        "hint": "Put // at the beginning of the line you want to comment out."
+      },
+      "solution": "// This displays a message about learning JavaScript\nconsole.log('I am learning JavaScript!');\n\n// console.log('Comment me out!');",
+      "commonStickingPoints": "Common mistakes:\n\n1. Forgetting the space after //: While //comment works, // comment is more readable.\n\n2. Trying to nest multi-line comments: /* /* nested */ */ doesn't work. Once the computer sees */, it thinks the comment is over.\n\n3. Not closing a multi-line comment: If you forget the */, everything after /* will be treated as a comment, and your code won't run!\n\n4. Over-commenting: Don't comment every single line. Comment the WHY and the complex parts, not the obvious stuff."
+    }
+  ]
+}
