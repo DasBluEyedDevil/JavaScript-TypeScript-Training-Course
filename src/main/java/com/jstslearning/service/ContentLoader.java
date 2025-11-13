@@ -19,18 +19,27 @@ public class ContentLoader {
 
     /**
      * Load all modules from the resources/content directory
+     * Attempts to load modules 1-14 (full curriculum)
      */
     public void loadAllModules() {
-        // Load modules 1-14 (we'll start with 1 and 2 for the demo)
-        for (int i = 1; i <= 2; i++) {
+        // Load all available modules (1-14)
+        for (int i = 1; i <= 14; i++) {
             try {
                 Module module = loadModule(i);
                 if (module != null) {
                     modules.add(module);
+                    System.out.println("Loaded Module " + i + ": " + module.getTitle());
                 }
             } catch (Exception e) {
+                // Non-fatal: module may not exist yet
                 System.err.println("Warning: Could not load module " + i + ": " + e.getMessage());
             }
+        }
+
+        if (modules.isEmpty()) {
+            System.err.println("ERROR: No modules could be loaded!");
+        } else {
+            System.out.println("Successfully loaded " + modules.size() + " modules");
         }
     }
 
